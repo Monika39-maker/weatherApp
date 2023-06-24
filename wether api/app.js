@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
                 const currentTempInFarenheit = Math.floor((currentTempInKelvin - 273.15) * 9/5 + 32);
                 console.log(currentTempInFarenheit)
                 temperatureDegree.textContent = currentTempInFarenheit;
-                temperatureDescription.textContent = `Feels like: ${feels_like}`;
+                temperatureDescription.innerHTML= `Feels like: ${Math.floor((feels_like - 273.15) * 9/5 + 32)}<span>&#176;</span>F`;
                 locationTimeZone.textContent = data.name;
 
                 //FORMULA FOR CELSIUS   
